@@ -19,12 +19,15 @@ struct Pessoa2{
 
 int main(){
     Pessoa pessoa1;
-    //struct Pessoa2 pessoa2;
-
-    pessoa1.idade = 35;
-    pessoa1.sexo = 'f';
-    strcpy(pessoa1.nome,"Maria");
-    //Para imprimir
+    //Entrada de dados
+    printf("Digite seu nome: ");
+    fgets(pessoa1.nome,100,stdin);
+    printf("Digite sua idade: ");
+    scanf("%d", &pessoa1.idade);
+    scanf("%c");
+    printf("Digite F ou M para o sexo: ");
+    scanf("%c", &pessoa1.sexo);
+    //SE  eu colocar o nome aqui, vou ter que limpar o buffer do teclado então vou colocar o nome  a cima.
 
     printf("Nome: %s\nIdade: %d\nSexo: %c\n", pessoa1.nome, pessoa1.idade, pessoa1.sexo);
     return 0;
